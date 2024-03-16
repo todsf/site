@@ -1,0 +1,320 @@
+body {
+	font-size: 16px;
+	font-family: Arial, sans-serif;
+	line-height: 1.5;
+	overflow-x: hidden;
+	height: 100%;
+	min-height: 100%;
+	min-width: 440px;
+}
+
+* {
+    box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+/* Header */
+.header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 15px 60px;
+	box-shadow: 0 4px 10px rgba(0, 0, 0, .1);
+}
+
+.brand {
+	font-size: 50px;
+	color: #000;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+.nav_links a,
+.cta,
+.overlay__content a {
+	font-family: "Arial", sans-serif;
+	font-weight: 500;
+	color: #000;
+	text-decoration: none;
+}
+
+.nav_links {
+	list-style: none;
+	display: flex;
+}
+
+.nav_links li {
+	padding: 0px 20px;
+}
+
+.nav_links li a {
+	font-size: 20px;
+	transition: color 0.3s ease 0s;
+}
+
+.nav_links li a:hover {
+	color: #0088a9;
+}
+
+.cta {
+	padding: 9px 25px;
+	background-color: rgba(0, 136, 169, 1);
+	border: none;
+	border-radius: 50px;
+	cursor: pointer;
+	transition: background-color 0.3s ease 0s;
+}
+
+.cta:hover {
+	background-color: rgba(0, 136, 169, 0.8);
+}
+
+/* Mobile Nav */
+
+.overlay {
+	height: 100%;
+	width: 0;
+	position: fixed;
+	z-index: 1;
+	left: 0;
+	top: 0;
+	background-color: #24252acf;
+	overflow-x: hidden;
+	transition: width 0.5s ease 0s;
+}
+
+.overlay--active {
+	width: 100%;
+}
+
+.overlay__content {
+	display: flex;
+	height: 100%;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.overlay a {
+	padding: 15px;
+	font-size: 36px;
+	display: block;
+	transition: color 0.3s ease 0s;
+}
+
+.overlay a:hover,
+.overlay a:focus {
+	color: #0088a9;
+}
+.overlay .close {
+	position: absolute;
+	top: 20px;
+	right: 45px;
+	font-size: 60px;
+	color: #edf0f1;
+}
+
+@media screen and (max-height: 450px) {
+	.overlay a {
+		font-size: 20px;
+	}
+	.overlay .close {
+		font-size: 40px;
+		top: 15px;
+		right: 35px;
+	}
+}
+
+@media only screen and (max-width: 800px) {
+	.nav_links,
+	.cta {
+		display: none;
+	}
+	.menu {
+		display: initial;
+	}
+}
+
+.options-container {
+	margin: 10px 0 2em 0;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 1em;
+	text-align: center;
+	box-shadow: 0 4px 10px rgba(0, 0, 0, .1);
+	padding-bottom: 5px;
+}
+
+.option {
+	background-color: #000000bb;
+	color: white;
+	border: none;
+	cursor: pointer;
+	padding: 1em 1.5em;
+	border-radius: 0.5em;
+	border: none;
+	text-transform: capitalize;
+	font-size: 16px;
+}
+
+/* Main */
+
+main {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.articles {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 5px;
+}
+
+.article img {
+    width: 400px;
+    height: 240px;
+    margin-bottom: 10px;
+}
+
+.link_news1 {
+    text-decoration: none;
+    color: black;
+}
+
+.heading-2 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.sidebar_news {
+	display: flex;
+	border: 2px solid rgba(58, 143, 182, 0.816);
+	box-shadow: 0 4px 10px rgba(43, 196, 175, 0.796);
+	margin-bottom: 10px;
+}
+
+.sidebar_news_photo {
+	width: 15vh;
+	height: 100%;
+}
+
+.sidebar p {
+	margin-left: 10px;
+	font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+
+/* Footer */
+footer{
+	width: 100%;
+	height: auto;
+	background: #000;
+	margin: 0 auto;
+	text-align: center;
+	padding-top: 25px;
+}
+
+footer a {
+	color: white;
+	font-size: 16px;
+	margin-left: 10px;
+	text-decoration: none;
+}
+
+footer nav a:hover {
+	border-bottom: 1px solid white;
+}
+
+footer p {
+	color: white;
+	margin: 0;
+}
+
+.brand-graphic {
+	height: 100px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.social img {
+	margin-left: 10px;
+	margin-bottom: 10px;
+	width: 50px;
+}
+
+.social img:hover{
+	background: rgba(130, 162, 69, 0.6);
+	border-radius: 50%;
+}
+
+@media (max-width: 1200px)
+{
+	body {
+		width: 1190px;
+	}
+	.articles {
+		grid-template-columns: 1fr 1fr;
+	}
+}
+
+@media (max-width: 1100px)
+{
+	body {
+		width: 1090px;
+	}
+}
+
+@media (max-width: 1000px)
+{
+	body {
+		width: 990px;
+	}
+}
+
+@media (max-width: 900px)
+{
+	body {
+		width: 890px;
+	}
+}
+
+@media (max-width: 800px)
+{
+	body {
+		width: 790px;
+	}
+	.article {
+		margin: 0 auto;
+	}
+}
+
+@media (max-width: 700px)
+{
+	body {
+		width: 690px;
+	}
+	.articles {
+		grid-template-columns: 1fr;
+	}
+}
+
+@media (max-width: 600px)
+{
+	body {
+		width: 590px;
+	}
+}
+
+@media (max-width: 500px)
+{
+	body {
+		width: 490px;
+	}
+}
+
+@media (max-width: 400px)
+{
+	.articles {
+		width: 350px;
+	}
+}
